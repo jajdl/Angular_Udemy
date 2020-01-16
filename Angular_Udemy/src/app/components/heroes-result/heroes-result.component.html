@@ -1,0 +1,30 @@
+<div class="row animated fadeIn fast" *ngIf="heroe.length ==0">
+  <div class="col-md-12">
+    <div class="alert alert-info" role="alert">
+        No existen resultados con el término: {{termino}}
+    </div>
+  </div>
+</div>
+
+<div class="card-columns">
+
+    <!-- <div class="card" *ngFor="let heroe of heroe let i = index">
+      <img [src]="heroe.img" class="card-img-top img-fluid" [alt]="heroe.nombre">
+      <div class="card-block">
+        <h5 class="card-title">{{heroe.nombre}}</h5>
+        <p class="card-text">{{heroe.bio}}</p>
+        <p class="card-text"><small class="text-muted">{{heroe.aparicion}}</small></p>         
+        
+        <button [routerLink]="['/heroes']"type="button" class="btn-outline-warning btn-block" *ngIf="heroe.nombre == 'Aquaman'">Regresar...</button>
+        <button [routerLink]="['/heroes']"type="button" class="btn-outline-success btn-block" *ngIf="heroe.nombre == 'Hulk'">Regresar...</button>
+        <button [routerLink]="['/heroes']"type="button" class="btn-outline-info btn-block" *ngIf="heroe.nombre == 'Spider-Man'">Regresar...</button>
+        <button [routerLink]="['/heroes']"type="button" class="btn-outline-dark btn-block" *ngIf="heroe.nombre == 'Batman'">Regresar...</button>
+        <button [routerLink]="['/heroes']"type="button" class="btn-outline-secondary btn-block" *ngIf="heroe.nombre == 'Linterna Verde'">Regresar...</button>
+        <button [routerLink]="['/heroes']"type="button" class="btn-outline-primary btn-block" *ngIf="heroe.nombre == 'Wolverine'">Regresar...</button>
+        <button [routerLink]="['/heroes']"type="button" class="btn-outline-danger btn-block" *ngIf="heroe.nombre == 'Daredevil'">Regresar...</button>
+      </div>
+    </div> -->  
+
+    <!-- <app-heroe-tarjeta (heroeSeleccionado) ="verHeroe($event)" [heroe]="heroeArray" [index]="i" *ngFor="let heroeArray of heroe; let i = index"></app-heroe-tarjeta> -->
+    <app-heroe-tarjeta [heroe]="heroeArray" [index]="heroeArray.idx" *ngFor="let heroeArray of heroes"></app-heroe-tarjeta>
+  </div>
