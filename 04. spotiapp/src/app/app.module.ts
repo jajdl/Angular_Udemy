@@ -10,8 +10,13 @@ import { NavbarComponent } from './components/share/navbar/navbar.component';
 
 //importar rutas
 import {ROUTES} from './app.routes'; //este en caso de que los demas no funcionen
+
+//otros
 import {HttpClientModule} from '@angular/common/http';
 import { SpotifyService } from './services/spotify.service';
+
+//pipes
+import { NoimagePipe } from './pipes/noimage.pipe';
       
 @NgModule({
   declarations: [
@@ -19,7 +24,8 @@ import { SpotifyService } from './services/spotify.service';
     HomeComponent,
     SearchComponent,
     ArtistaComponent,
-    NavbarComponent
+    NavbarComponent,
+    NoimagePipe
   ],
   imports: [
     BrowserModule,

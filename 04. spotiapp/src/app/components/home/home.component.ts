@@ -16,8 +16,8 @@ export class HomeComponent {
 
     this.spotify.getNewReleases()
     .subscribe( (data: any) => {
-      console.log(data.albums.items);
-      this.nuevasCanciones =data.albums.items;
+      //console.log(data.albums.items);
+      this.nuevasCanciones = data; //data.albums.items;
     });  
   }
 
